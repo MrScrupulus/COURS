@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cours HTML - Premières Balises</title>
+  </head>
+  <body>
+    <a href="#fin-page">pied de page</a>
+    <!-- Certaines balises n'ont pas d'effet particulier, mais un nom différent pour s'y retrouver plus facilement dans le code -->
+    <header></header>
+    <!-- 
+        Certaines ont des règles qui ne casseront pas votre code, mais sont à respecter pour suivre les standards du web, la sémantique
+        Par exemple, main ne devrait apparaître qu'une fois par document. -->
+    <main></main>
+    <footer></footer>
+    <!-- section et articles devraient contenir un titre -->
+    <section></section>
+    <article></article>
+    <nav></nav>
+    <aside></aside>
+    <div></div>
+    <!-- Certaines balises de type block (pardéfaut le block prend toute la largeur de la page, la hauteur de son contenu, peut contenir n'importe quoi et passe à la ligne) 
+     peuvent avoir des effets prticuliers
+     le p (paragraphe) possède une marge, et n'a le droit de contenir que des éléments inline -->
+    <p>Coucou</p>
+    <!-- Les balises de titre allant de h1 à h6, numéro qui indique leurs importance. -->
+    <h1>Mon super titre</h1>
+    <!-- ul ou menu permettent de faire des listes non ordonnées. (avec des petits points) 
+     Elles ne devraient contenir que des li. (list item) -->
+    <ul>
+      <li>Salut</li>
+      <li>Coucou</li>
+      <li>Bonjour</li>
+    </ul>
+    <menu>
+      <li>Salut</li>
+      <li>Coucou</li>
+      <li>Bonjour</li>
+    </menu>
+    <!-- ol permet de faire une liste numérotée -->
+    <ol>
+      <li>Salut</li>
+      <li>Coucou</li>
+      <li>Bonjour</li>
+    </ol>
+    <!-- la mise en forme du fichier HTML n'est pas prise en compte -->
+    <p>Coucou tout le monde 
+        Salut les gens ça va ?</p>
+    <!-- sauf ! avec la balise pre -->
+    <pre>
+        Coucou tout le monde
+        Salut les gens
+        ça        va?
+     </pre>
+     <!-- Les balises inline
+      Elles ont une hauteur et une largeur équivalente à leur contenu. 
+      Elles ne passent à la ligne que s'il n'y a plus de place, 
+      et elles ne peuvent contenir que du texte ou d'autres balises inline.
+      La balise a possède forcément l'attribut "href" 
+      Elle permet de créer un lien(ou une ancre)
+      vers une autrre page (interne ou externe au site) -->
+      <a href="./01_html.html"Premier fichier du cours>
+        <!-- L'attribut "target" avecla valeur "_blank" permet d'ouvrir le lien vers un nouvel onglet, et donc de garder l'utilisateur sur notre site -->
+        <a href="https://www.google.fr"
+        target="-blank">Google</a>
+        <!-- la balise img permet l'affichage di'mage.
+         l'attribut src contient le lien vers l'image
+         l'attribut alt, une description pour les robots et synthèse vocal (s'affiche en cas de problème avec le chargement)
+         Généralement on modifiera la taille en CSS, mais dans certains cas c'est aussi possible avec l'attribut "width"
+          -->
+        <img src="./Twemoji12_1f47a.svg.png" alt="icone de masque de démon" width="50">
+        <!-- la balise vidéo fonctionne comme l'image mais avec des attributs en plus :
+            - controls pour faire apparaître les contrôles
+            - muted pour mettre par défaut la vidéo en muet
+            - autoplay qui ne fonctionne que sur les vidéos muted
+            - loop pour jouer la vidéo en boucle
+            - poster pour mettre une image en vignette de présentation  -->
+        <video src="c:\Users\Candidat-001\Downloads\11924735_1440_2560_30fps.mp4" width="200" controls autoplay muted loop ></video>
+        <!-- audio fonctionne comme la vidéo -->
+        <!-- <audio src=""></audio> -->
+
+        <br>
+        <!-- balise inline sans effet -->
+        <span> Je ne sert à rien, ou presque</span>
+        <!-- ligne séparatrice -->
+        <hr>
+        <!-- les balises b et strong mettent le texte en gras mais ne doivent pas être utilisés pour cela.
+            * b doit être utilisé pour attirer l'oeil de l'utilisateur
+            * strong doit être utilisé pour indiquer quelque chose d'important  -->
+        <p>
+            <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b> 
+            Quo cupiditate minima
+            <strong>cum laboriosam illo fugiat.</strong>  
+            Esse similique odio repellendus fugit!  
+            <!-- i et em mettent le texte en italique mais ne doivent pas être utilisé pour ça. 
+             * i sera utilisé pour une citation, un terme technique...
+             * em pour mettre l'emphase sur une partie du texte   
+             -->
+            <i>Placeat illum quos porro unde omnis.</i> <em>Totam explicabo tenetur quaerat?</em> <br>
+            <abbr title="HyperText Markup Language">HTML</abbr> c'est cool !
+            </p>
+            <!-- Les id et les class permettent d'identifier un élément en CSS ou JS.
+             Un élément ne peut avoir qu'un id.
+             Un id doit être unique dans un document.
+             l'id peut être aussi utilisé en ancre avec une balise "a"
+             
+             Un élément peut avoir autant de classe que voulu (un espace entre chaque classe)
+             Une classe peut être réutilisé sur autant d'élément qu'on le souhaite-->
+        <span id="fin-page" class="superSpan span-inutile"></span>
+        <span class="superSpan"></span>
+
+
+  </body>
+</html>

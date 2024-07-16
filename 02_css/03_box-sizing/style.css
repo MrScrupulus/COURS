@@ -1,0 +1,96 @@
+*, ::before, ::after{
+    /* Le margin est un espacement à l'extérieur de l'élément HTML */
+    margin: 0;
+    /* Le padding est un espacement à l'intérieur de celuiçi (entre la bordure et le contenu) */
+    padding: 0;
+    /* Border-box permet que lorsque l'on donne une largeur ou une hauteur à un élément, 
+    la bordure soit prise en compte dans cette taille. */
+    box-sizing: border-box;
+}
+header{
+    background-color: aqua;
+    /* background-image permet d'ajouter des imagesd de fond.
+    Si on souhaite en mettre plusieurs sur un même élément, il faut les séparer d'un virgule
+    Les premières passent au dessus des suivantes */
+    background-image: url(koala-icon.jpg), url(bambou.jpg);
+    /* Si une image est trop petite pour remplir l'élément, elle va se répéter 
+    si on souhaite éviter cela, on peut utiliser background-repeat */
+    background-repeat: no-repeat;
+    /* background-position permet si l'image est plus petite, de la positionner dans l'élément 
+    Si elle est plus grande, d'indiquer quelle partie de l'image est visible */
+    background-position: right, center;
+    /* Permet d'indiquer à l'image d'être contenu par son parent, ou bien de le couvrir. (ou d'indiquer la taille qu'elle fait) */
+    background-size: contain, cover;
+}
+main{background-color: blueviolet;}
+main article {
+    /* modifier la largeur */
+    width: 45%;
+    /* Choisir le display (la façon de s'afficher) de l'élément, 
+    on trouvera "inline", "block", "inline-block", "none" et d'autres */
+    display: inline-block;
+    border: 5px solid green;
+    border-top-color: darkviolet;
+    /* équivaut à :
+        border-color: black;
+        border-style: solid;
+        border-width: 5px; */
+    
+    /* padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 5px; */
+        padding: 5px 10px;
+        /* padding et margin sont des versions résumés de padding-top...bottom...left...
+        avec une seule valeur, elle est appliquée partout
+        deux valeurs, la première est pour le haut et le bas, la seconde gauche et droite.
+        4 valeurs, elles s'appliqueront dans l'ordre haut droite bas gauche. */
+        margin: 20px auto 10px 3%;
+    }
+    h1{
+        font-size: 42px;
+        /* Positionnement du texte dans un élément */
+        text-align: center;
+        /* .5px = 0.5px */
+        padding: .5em .1em;
+        color: antiquewhite;
+        /*  Les 4 valeurs de l'ombre du texte sont : 
+            Décalage horizontal
+            Décalage Vertical
+            Rayon du flou (optionnelle)
+            COuleur
+         */
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    }
+    footer{
+        /* La propriété background est la version résumée de toutes les propriétés de background (image, color, repeat...) */
+        background: chartreuse;
+        /* width et height permettent de choisir la largeur et la hauteur d'un élément min-width et min-height
+         permettent de dire à l'élément qu'il doit faire au moins une certaine taille mais peut dépasser
+         max-width et max-height permettent de dire à l'élément qu'il ne doit pas dépasser une taille mais peut être plus petit  */
+        min-height: 150px;
+    }
+    li{
+        display: inline-block;
+        background-color: aqua;
+        /* permet de garder un ratio entre la largeur et la hauteur de mon élément.
+        SI les deuxsont définis, le ratio ne fonctionne plus */
+        aspect-ratio: 1/1;
+        /* permet d'arrondir les angles d'un certain nombre de pixes, à 50% on obtient un rond */
+        border-radius: 50%;
+        padding: 1.3em 5px;
+        margin-left: 15%;
+    }
+    div{
+        width: 40vw;
+        max-height: 90vh;
+        margin: 5px auto;
+    }
+    img{
+        width: 100%;
+        height: 20vh;
+        /* correspond au background-size mais adapté à une balise image */
+        object-fit: contain;
+        /* correspond au background-position mais adapté à une balise image */
+        object-position: top;
+    }

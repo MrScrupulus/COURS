@@ -1,0 +1,43 @@
+body {
+  box-sizing: border-box;
+  height: 100vh;
+
+  background-image: linear-gradient(
+    to right,
+    rgb(56, 0, 211),
+    rgb(133, 7, 133),
+    rgb(236, 48, 149)
+  );
+}
+.circle {
+  position: absolute;
+  object-position: center;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  background: white;
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+  border: 2px solide white;
+}
+.circle2 {
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  background: white;
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+  border: 2px solid white;
+}
+.circle3 {
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  background: white;
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+  border: 2px solid white;
+}

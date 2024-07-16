@@ -1,0 +1,106 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 400vh;
+}
+/* On va voir la propriété position qui permet de positionner des éléments
+Et les propriétés top, bottom, left, right et z-index qui ne fonctionne sur un élément postionné. */
+header {
+  padding: 1rem;
+  color: antiquewhite;
+  text-align: center;
+  /* les propriétés de "xxx-gradient" permettent de générer une image qui est un dégradé entre les couleurs fournies en paramètre. (au moins 2 et pas de maximum) */
+  background-image: linear-gradient(red, green, blue);
+  /* La position fixed permet d'avoir l'élément fixé au scrolling de la page
+    Il perdra alors sa place dans le flow de la page. */
+  position: fixed;
+  width: 100%;
+  /* le z-index permet de placer des éléments sur la profondeur de la page 
+  Tout élément est à 0 par défaut,
+  un élément avec un chiffre positif viendra se placer au desus et un chiffre négatif viendra le placer en dessous. */
+  z-index: 1;
+}
+nav,
+main {
+  padding-top: 70px;
+  display: inline-block;
+  height: 100%;
+  padding-left: 2rem;
+}
+nav {
+  width: 200px;
+  /* Optionnellement les dégradés peuvent prendre des degrés pour changer la direction du dégradé,
+  Et des tailles pour indiquer à partir d'où le dégradé d'une couleur commence. */
+  background-image: linear-gradient(
+    to right,
+    blue 33%,
+    white 33%,
+    white 66%,
+    red 66%
+  );
+}
+nav ul {
+  /* La position sticky garde l'emplacement de l'élément dans le flow de la page.
+    mais quand celui ci atteint la position indiqué (ici top 70px) il se met à suivre le scrollin tant qu'il peut rester dans son parent. */
+  position: sticky;
+  top: 70px;
+}
+main {
+  /* la fonction calc permet d'effectuer des calculs, attention de toujours laisser un espace entre le signe et les valeurs */
+  width: calc(100% - 210px);
+  /* radiant-gradient permet de faire des dégradés en cercle. */
+  background-image: radial-gradient(yellow, green, orange);
+  /* TODO: relative */
+}
+main p:first-child {
+  background-image: radial-gradient(circle, red 20%, white 20%);
+}
+main p:last-child {
+  background-image: linear-gradient(
+    45deg,
+    #ffff08 25%,
+    #000305 25%,
+    #000305 50%,
+    #ffff08 50%,
+    #ffff08 75%,
+    #000305 75%
+  );
+  background-size: 56.57px 56.57px;
+  height: 300px;
+  color: rgb(112, 199, 226);
+  text-shadow: 0px 0px 2px black;
+  /* relative n'a aucun effet si on ne lui donne d'autres propriétés.
+  Si on lui donne une position de propriété, l'élément est déplacé par rapport à sa position d'origine.
+  Mais sa position d'origine est gardé dans le flow.
+   */
+  position: relative;
+  top: 40px;
+  right: 50px;
+}
+button {
+  background-image: conic-gradient(violet, gold, chartreuse);
+  font-size: 5em;
+  /* en absolute, l'élément sort du flow de la page.
+  Et si des positions lui sont données (top, bottom...)
+  Il se positionnera par rapport à son parent positionné le plus proche (ou à défaut, le body) */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  /* La propriété transform permet d'appliquer des transformations à un élément.translate permet de déplacer l'élément */
+  transform: translate(-50%, -50%);
+}
+img {
+  width: 75px;
+  /* float retire l'élément de son flux d'origine pour le replacer ailleurs.Il permettra entre autre d'avoir du texte entourant l'élément */
+  float: left;
+  border-radius: 50%;
+  margin: 5px;
+  /* cela permet au texte de suivre la forme de l'élément */
+  shape-outside: margin-box;
+}
