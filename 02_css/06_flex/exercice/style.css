@@ -1,0 +1,134 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: aqua;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+div {
+  border: 1px solid aqua;
+}
+div:nth-child(1) {
+  width: 50vw;
+  background-color: aqua;
+}
+div:nth-child(2) {
+  width: 50vw;
+  background-color: green;
+}
+div:nth-child(3) {
+  width: 50vw;
+  background-color: orange;
+}
+div:nth-child(4) {
+  width: 50vw;
+  background-color: pink;
+}
+div:nth-child(5) {
+  width: 50vw;
+  background-color: blue;
+}
+div:nth-child(6) {
+  width: 50vw;
+  background-color: yellow;
+}
+div:nth-child(7) {
+  width: 50vw;
+  background-color: brown;
+}
+div:nth-child(8) {
+  width: 50vw;
+  background-color: aquamarine;
+}
+@media screen and (min-width: 600px) {
+  body {
+    border: 0;
+    background-color: transparent;
+  }
+  div {
+    border: 1px solid aqua;
+  }
+  div:nth-child(1) {
+    width: 25vw;
+    background-color: aqua;
+  }
+  div:nth-child(2) {
+    width: 25vw;
+    background-color: green;
+  }
+  div:nth-child(3) {
+    width: 25vw;
+    background-color: orange;
+  }
+  div:nth-child(4) {
+    width: 25vw;
+    background-color: pink;
+  }
+  div:nth-child(5) {
+    width: 25vw;
+    background-color: blue;
+  }
+  div:nth-child(6) {
+    width: 25vw;
+    background-color: yellow;
+  }
+  div:nth-child(7) {
+    width: 25vw;
+    background-color: brown;
+  }
+  div:nth-child(8) {
+    width: 25vw;
+    background-color: aquamarin25;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-color: transparent;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  div {
+    border: 0;
+  }
+  div:nth-child(1) {
+    width: 12.5vw;
+    background-color: aqua;
+    display: column;
+  }
+  div:nth-child(2) {
+    width: 12.5vw;
+    background-color: green;
+  }
+  div:nth-child(3) {
+    width: 12.5vw;
+    background-color: orange;
+  }
+  div:nth-child(4) {
+    width: 12.5vw;
+    background-color: pink;
+  }
+  div:nth-child(5) {
+    width: 12.5vw;
+    background-color: blue;
+  }
+  div:nth-child(6) {
+    width: 12.5vw;
+    background-color: yellow;
+  }
+  div:nth-child(7) {
+    width: 12.5vw;
+    background-color: brown;
+  }
+  div:nth-child(8) {
+    width: 12.5vw;
+    background-color: aquamarine;
+  }
+}
