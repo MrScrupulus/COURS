@@ -1,0 +1,47 @@
+* ::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1px) {
+  body {
+    background-color: aqua;
+  }
+  #menu {
+    float: right;
+  }
+
+  li {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  body {
+    background-color: aquamarine;
+  }
+
+  #menu {
+    display: none;
+  }
+  li {
+    font-size: 42px;
+    text-align: center;
+    display: table-cell;
+  }
+}
+@media screen and (min-width: 700px) {
+  body {
+    background-color: burlywood;
+    position: left;
+  }
+  li:hover {
+    background-color: grey;
+  }
+  li {
+    text-align: left;
+    font-size: 32px;
+    list-style-type: none;
+    display: block;
+  }
+}
