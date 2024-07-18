@@ -14,7 +14,10 @@ body {
   Donc la première rangée prendra 1/5ème de l'espace
   la seconde 3/5ème et la dernière 1/5ème. */
   grid-template-rows: 1fr 3fr 1fr;
-  /* TODO: area */
+  /* Avec grid-template-area on peut placer les éléments selon leurs noms.
+  Chaque "" représentant une ligne de la grille.
+  Et chaque nom une colonne de la ligne, 
+  il faut faire attention que chaque ligne possède le même nombre de colonne.  */
   grid-template-areas:
     "header header header header header header"
     "menu article article article chaussette chaussette"

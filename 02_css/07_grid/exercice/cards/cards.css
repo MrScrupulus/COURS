@@ -1,0 +1,64 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  grid-area: h;
+  text-align: center;
+  font-weight: bold;
+  margin: 50px;
+}
+body {
+  display: grid;
+  grid-template-areas:
+    "h"
+    "c"
+    "f"
+    "r"
+    "s";
+  grid-template-rows: auto repeat(4, 50vh);
+  text-align: center;
+}
+h2 {
+  text-align: left;
+  padding-top: 10px;
+  font-size: 1em;
+  font-weight: bold;
+}
+div {
+  margin: 20px;
+  border: 1px solid black;
+  background: linear-gradient(white 94%, rgb(71, 69, 69) 6%);
+}
+
+img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.city {
+  grid-area: c;
+}
+.fireworks {
+  grid-area: f;
+}
+.river {
+  grid-area: r;
+}
+.sky {
+  grid-area: s;
+}
+@media screen and (min-width: 600px) {
+  body {
+    grid-template-areas: "h h" "c f" "r s";
+  }
+}
+@media screen and (min-width: 900px) {
+  body {
+    grid-template-areas: "h h h" "c f r" "s . .";
+  }
+}
