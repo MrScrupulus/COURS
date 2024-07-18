@@ -1,0 +1,43 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  height: 100vh;
+  /* Si plusieurs unités fr sont utilisées 
+  Elles se partagent l'espace restant.
+  Pour s'imaginer le résultat, on fait le total des fr (ici5)
+  Donc la première rangée prendra 1/5ème de l'espace
+  la seconde 3/5ème et la dernière 1/5ème. */
+  grid-template-rows: 1fr 3fr 1fr;
+  /* TODO: area */
+  grid-template-areas:
+    "header header header header header header"
+    "menu article article article chaussette chaussette"
+    "menu f f f f f";
+}
+.item1 {
+  background-color: darkcyan;
+  /*  On peut aussi se servir de grid-area pour nomme les éléments */
+  grid-area: header;
+}
+.item2 {
+  background-color: darkmagenta;
+  grid-area: menu;
+}
+.item3 {
+  background-color: darkorange;
+  grid-area: article;
+}
+.item4 {
+  background-color: darkolivegreen;
+  grid-area: chaussette;
+}
+.item5 {
+  background-color: darkgoldenrod;
+  grid-area: f;
+}
