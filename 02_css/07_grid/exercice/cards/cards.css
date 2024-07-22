@@ -20,6 +20,7 @@ body {
     "r"
     "s";
   grid-template-rows: auto repeat(4, 50vh);
+  /* grid-template-columns: repeat (auto-fit, checker aussi cvomparaison auto-fill*/
   text-align: center;
 }
 h2 {
