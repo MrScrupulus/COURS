@@ -1,0 +1,101 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: grey;
+}
+li {
+  display: inline-block;
+  margin: 20px;
+}
+button {
+  font-size: 3rem;
+  padding: 2rem;
+}
+/* -------------------------------------------------------------------------------- */
+.Bouton {
+  transition-duration: 1s;
+  transition-property: transform;
+  border: solid 2px black;
+}
+.Bouton:hover {
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+  transition-property: border, color;
+  border: solid 2px red;
+  color: red;
+  transform: rotateY(360deg);
+}
+/* ---------------------------------------------------------------------------------- */
+.BOUTON {
+  border: solid 2px transparent;
+  border-radius: 60px 60px;
+  background-color: orange;
+  color: white;
+  transition-duration: 0s;
+  transition-delay: 0s;
+  transition-property: border, color, transform;
+}
+.BOUTON:hover {
+  transition-property: all;
+  border: solid 2px white;
+  cursor: pointer;
+}
+.BOUTON:hover span {
+  color: orange;
+  background-color: white;
+  transform: rotateZ(-360deg);
+}
+span {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  border-radius: 50% 50%;
+  transition: transform;
+  transition-duration: 0.5s;
+}
+/* ----------------------------------------------------------------------- */
+.Cliquez-moi {
+  border: none;
+  border-radius: 25px 25px;
+  cursor: pointer;
+  background-color: darkorchid;
+  color: white;
+  box-shadow: 8px 8px rgba(0, 0, 0, 0.205);
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
+.Cliquez-moi:hover {
+  translate: 0 3px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.205);
+}
+.Cliquez-moi:hover:active {
+  transform: rotateX(360deg);
+}
+/* --------------------------------------------------------------------- */
+.CLIQUEZ-MOI {
+  border: none;
+  background-color: transparent;
+  color: darkviolet;
+  border: none;
+  transition-duration: 3s;
+  transition-property: border;
+}
+.CLIQUEZ-MOI:hover {
+  color: black;
+  cursor: pointer;
+  border-top: solid 5px darkviolet;
+  border-bottom: solid 5px darkviolet;
+  transform: border;
+}
+.CLIQUEZ-MOI:hover:active {
+  color: darkorchid;
+  border-top: solid 5px darkorchid;
+  border-bottom: solid 5px darkorchid;
+  transform: border;
+}
