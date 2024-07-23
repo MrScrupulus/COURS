@@ -38,7 +38,7 @@ li#Menu_Important + li {
     background: deeppink;
 }
 /* ----------- Les pseudos classes ------------- */
-/* les pseudos classes sont des sélecteurs qui s'écrivent "/nomDeLaPseudoClass */
+/* les pseudos classes sont des sélecteurs qui s'écrivent ":nomDeLaPseudoClass */
 li:hover {
     /* Permet d'appliquer des règles au survol de l'élément.
     ! Attention, ne fonctionne pas sur mobile */

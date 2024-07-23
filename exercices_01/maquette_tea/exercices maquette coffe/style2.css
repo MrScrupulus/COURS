@@ -1,0 +1,32 @@
+* ::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+body{
+  width: 100vw;
+  height: 100vh;
+}
+img{
+  object-position: 100vw 100vh;
+  object-fit: contain;
+}
+
+header{
+    background-image: url(header_cafe.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+
+    
+}
+.accroche{
+  color: green;
+  padding-top: 50px;
+}
+.intro{
+  padding: 50px ;
+  text-align: center;
+}
