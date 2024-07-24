@@ -1,0 +1,129 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes div1 {
+    from{
+        top: 0vh;
+        left: 0vw;
+    }
+    25%{
+        top: 50vh;
+        left: 95vw;
+    }
+    50%{
+        top: 95vh;
+        left: 15vw;
+    }
+    75%{
+        top: 90vh;
+        left: 0vw;
+    }
+    to{
+        top: 5vh;
+        left: 95vw;
+    }
+}
+@keyframes div2{
+    from{
+        top: 0vh;
+        left: 80%;
+    }
+    30%{
+        top: 80vh;
+        left: 0vw;
+    }
+    60%{
+        top: 95vh;
+        left: 10vw;
+    }
+    to{
+        top: 0vh;
+        left: 80vw;
+    }
+}    
+@keyframes div3 {
+    from{
+        top: 50vh;
+        left: 0vw;
+    }
+    25%{
+        top: 0vh;
+        left: 50vw;
+    }
+    50%{
+        top: 50vh;
+        left: 95vw;
+    }
+    75%{
+        top: 95vh;
+        left: 50vw;
+    }
+    to{
+        top: 50vh;
+        left: 0vw;
+    }
+    
+}
+@keyframes sun {
+    from{
+        top: 90vh;
+        left: 90vw;
+    }
+    50%{
+        top: 40vh;
+        left: 55vw;
+    }
+    to{
+        top: 0vh;
+        left: 0vw;
+    }
+
+    
+}
+
+
+body{
+    padding: 5px;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, lightgreen, chartreuse, yellowgreen,  green, darkgreen);
+}
+div{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.div1{
+    top: 0px;
+    left: 0px;
+    animation: div1 linear infinite alternate;
+    animation-duration: 10s;
+    background-color: darkblue;
+}
+.div2{
+    left: 80%;
+    animation: div2 linear infinite alternate;
+    animation-duration: 10s;
+    background-color: darkorange;
+}
+.div3{
+    top: 95vh;
+    left: 0vw;
+    background-color: darkviolet;
+    animation: div3 linear infinite;
+    animation-duration: 10s;
+}
+.sun{
+    top: 90vh;
+    left: 90vw;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: yellow;
+    animation: sun linear infinite alternate;
+    animation-duration: 15s;
+}

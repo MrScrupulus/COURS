@@ -10,6 +10,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(4, 25%);
+    grid-template-: 6;
     grid-template-areas:  
     ". header header ."
     ". nav nav ."
