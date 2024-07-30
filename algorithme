@@ -1,0 +1,22 @@
+Algorithm:
+carre de la variable saisie
+variables:
+nombres : reel;
+resultat, total : reel;
+Début:
+nombres←saisie utilisateur;
+resultat←nombres*nombres;
+Ecrire : (resultat);
+Fin 
+
+Algorithm:
+calcul prix TTC ensemble d'article;
+variables:
+articles : entier
+prixHT: reel
+TVA : reel
+total : reel
+Début:
+prix ←ttc +tva
+total←prixTTC*nombre
+Ecrire(total)
