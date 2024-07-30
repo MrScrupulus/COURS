@@ -1,0 +1,27 @@
+body {
+  display: grid;
+  grid-template-rows: 0fr 1fr 0fr;
+  padding: 8px;
+  min-height: 100vh;
+}
+section#presentation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+}
+section#presentation div:nth-child(1) {
+  background-color: darkviolet;
+}
+section#presentation div:nth-child(2) {
+  background-color: chartreuse;
+}
+section#presentation div:nth-child(3) {
+  background-color: cyan;
+}
+section#presentation div:nth-child(4) {
+  background-color: yellowgreen;
+}
+section#presentation .div {
+  width: 100px;
+}

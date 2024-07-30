@@ -1,0 +1,32 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: solid 1px red;
+}
+/* -----------------Grid----------------------- */
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 8px;
+}
+section#presentation {
+  display: grid;
+}
+section#presentation div:nth-child(1) {
+  background-color: darkviolet;
+}
+section#presentation div:nth-child(2) {
+  background-color: chartreuse;
+  grid-column-start: 2;
+}
+section#presentation div:nth-child(3) {
+  background-color: cyan;
+  grid-column: span 2;
+}
+section#presentation div:nth-child(4) {
+  background-color: yellowgreen;
+}
