@@ -1,3 +1,78 @@
-Algorithme age 
+Algorithm :
+//genere un ordre de mot (phrase)
+variables :
+belle, marquise, vos, beaux, yeux, me, font, mourir, d'amour " ": CAR; 
+Debut :
+"belle"← saisie();
+"marquise"← saisie();
+"vos"← saisie();
+"beaux"← saisie();
+"yeux"← saisie();
+"me"← saisie();
+"font"← saisie();
+" "← saisie();
+Ecrire(CAR & " " & CAR & " " & CAR); //afficher les mots dans un ordre *4
+Text1 : belle marquise vos beaux yeux me font mourir d'amour
+Text2 : marquise belle vos yeux beaux me font d'amour mourir
+Text3 : vos beaux yeux belle marquise me font mourir d'amour    
+Text4 : mourir d'amour belle marquise vos beaux yeux me font
+Fin
 
-variables:
+Algorithm texte mélangé
+variables : 
+chaine1, chaine2, chaine3, chaine4;
+Début :
+chaine1 ← saisie();
+chaine2 ← saisie();
+chaine3 ← saisie();
+chaine4 ← saisie();
+Ecrire(chaine1 & chaine2 & chaine3 & chaine4);
+Ecrire(chaine2 & chaine3 & chaine4 & chaine1);
+Ecrire(chaine3 & chaine4 & chaine1 & chaine2);
+Ecrire(chaine4 & chaine1 & chaine2 & chaine3);
+Fin
+
+
+
+Algorithm : // défninir si un nombre est positif ou négatif
+variables : nombre : entier !=0;
+Debut : 
+nombre←saisie();
+Si (nombre > 0) alors
+Ecrire("positif");
+sinon si (nombre=0) alors 
+Ecrire("nul");
+Sinon Ecrire("negatif");
+Fin Si
+
+Algorithm : // défninir si le resultat d'un produit est positif ou négatif
+variables : nombre1, nombre2 : entier !=0;
+Début : 
+nombre1←saisie();
+nombre2←saisie();
+
+    si (nombre1<0 ou nombre2 <0) alors 
+    ecrire("negatif");
+    Si (nombre1 <0 & nombre2 <0) alors 
+    ecrire("positif");
+    sinon ecrire(positif);
+
+Fin Si
+
+Algorithm : // définir si ds mots sont dans l'ordre alphabétique
+variables : 1er CAR de "chaine"; // premier CAR du mot 
+Début : //utilisateur écrit 3 mots
+chaine1←saisie(); 
+chaine2←saisie();
+chaine3←saisie();
+Si (premier CAR de chaine1 < premier CAR de chaine2) alors 
+Ecrire("mot 1" & " est avant mot 2");
+Sinon  
+Ecrire("mot 1" & "est après mot 2");
+Fin si
+
+
+
+
+
+/cf: correction de fautes sur discord.
