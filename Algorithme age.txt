@@ -60,19 +60,58 @@ nombre2←saisie();
 Fin Si
 
 Algorithm : // définir si ds mots sont dans l'ordre alphabétique
-variables : 1er CAR de "chaine"; // premier CAR du mot 
+variables :"mot 1", "mot2" : 1er CAR de "chaine"; // première lettre d l'aphabet
 Début : //utilisateur écrit 3 mots
 chaine1←saisie(); 
 chaine2←saisie();
 chaine3←saisie();
-Si (premier CAR de chaine1 < premier CAR de chaine2) alors 
+Si ( chaine1 > premier CAR de chaine2 etchaine2 > chaine 3) alors 
 Ecrire("mot 1" & " est avant mot 2");
 Sinon  
 Ecrire("mot 1" & "est après mot 2");
 Fin si
 
-
+Algorithm : categorie d'un enfant
+variables : nombre : entier
+Début :
+nombre←saisie();
+Si (nombre de >=6 et nombre <=7) alors
+Ecrire("poussin");
+Sinon si (nombre >= 8 et nombre <=9) alors
+Ecrire("Pupille");
+Sinon si (nombre >=10 et nombre <=11) alors 
+Ecrire("Minime");
+Sinon si (nombre >=12) alors 
+Ecrire("Cadet");
+Fin Si
 
 
 
 /cf: correction de fautes sur discord.
+
+Algorithm : Emmet Brown
+variables : heure, minute : entier
+Début :
+heure←saisie();
+minute←saisie();
+Si (heure = 12 et minute = 59) alors
+    Ecrire("Dans une minute heure + 1" & "minute =0");
+Sinon si (heure = 12" et "minute = 0") alors
+    Ecrire("Dans une minute heure = 12" & "minute +1");
+sinon si (heure = 23" et "minute = 59") alors
+    Ecrire("Dans une minute heure = 00" & "minute = 0");
+Fin Si
+
+Algorithm : Emmet Brown
+variables : heure, minute, seconde : entier
+Début :
+heure←saisie();
+minute←saisie();
+seconde←saisie();
+Si (heure = 12 et minute = 59 et seconde = 59) alors
+    Ecrire("Dans une minute heure + 1" & "minute =0" & seconde = 0");
+Sinon si (heure = 12" et "minute = 0" et "seconde = 0") alors
+    Ecrire("Dans une minute heure = 12" & "minute +1" & seconde = +1");
+sinon si (heure = 23" et "minute = 59" et "seconde = 59") alors
+    Ecrire("Dans une minute heure = 00" & "minute = 0" & seconde = 0");
+Fin Si
