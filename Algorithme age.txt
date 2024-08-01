@@ -108,10 +108,40 @@ Début :
 heure←saisie();
 minute←saisie();
 seconde←saisie();
-Si (heure = 12 et minute = 59 et seconde = 59) alors
-    Ecrire("Dans une minute heure + 1" & "minute =0" & seconde = 0");
-Sinon si (heure = 12" et "minute = 0" et "seconde = 0") alors
-    Ecrire("Dans une minute heure = 12" & "minute +1" & seconde = +1");
 sinon si (heure = 23" et "minute = 59" et "seconde = 59") alors
     Ecrire("Dans une minute heure = 00" & "minute = 0" & seconde = 0");
+Si (heure = 12 et minute = 59 et seconde = 59) alors
+    Ecrire("Dans une minute heure + 1" & "minute =0" & seconde = 0");
+Sinon si ("minute = 0" et "seconde = 0") alors
+    Ecrire("minute +1" & seconde = +1");
+Sinon si secondes←secondes+1
 Fin Si
+
+Algorithm : calcul fourchettes de prix
+variables : prix, unités : reel; 
+Début :
+unités←saisie();
+prix←saisie();
+Si (unités >0) & (unités <=10) alors
+    Ecrire("Prix←0.10€");
+Sinon si (unités >10) & (unités <=30) alors
+    Ecrire("Prix = 0.10€ * 10 + prix = 0.09 *       unités -10 ");
+Sinon si (unités >30)  alors
+    ecrire("prix = 0.09 * 20 + prix = 0.1 * 10 + prix = 0.08 *  unités - 30");
+    Fin Si
+    
+
+    Algorithm : calcul de l'impot;
+    variables : age : entier, 
+                homme, femme : chaine;
+    début:
+    age←saisie();
+    homme←saisie();
+    femme←saisie();
+    Si (homme && age > 20) alors
+        Ecrire("vous payez l'impôt");
+        Sinon si (femme && age >=18, age <=35) alors
+            Ecrire("vous payerl'impôt");
+            Sinon Ecrire("vous ne payez pas l'impôt");
+            Fin Si
+            Fin Si
