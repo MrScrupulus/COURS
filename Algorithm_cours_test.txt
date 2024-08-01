@@ -133,15 +133,101 @@ Sinon si (unités >30)  alors
 
     Algorithm : calcul de l'impot;
     variables : age : entier, 
-                homme, femme : chaine;
+                sexe : CAR; //Femme: Boolean;
+            
     début:
     age←saisie();
     homme←saisie();
     femme←saisie();
-    Si (homme && age > 20) alors
+    Si (homme//Si(non femme) && age > 20) alors
         Ecrire("vous payez l'impôt");
         Sinon si (femme && age >=18, age <=35) alors
             Ecrire("vous payerl'impôt");
             Sinon Ecrire("vous ne payez pas l'impôt");
             Fin Si
-            Fin Si
+            
+
+
+Algorithm: moyenne 1 élève
+//entrer des notes et en faire la moyenne
+Variables : note, moyenne : reel;
+Début :
+    note←saisie();
+    Pour i←0 à 5 faire
+    TEST[]←saisie("Veuillez saisir la note " ");
+    TEST[]←saisie("Veuillez saisir la note " ");
+    TEST[]←saisie("Veuillez saisir la note " ");
+    TEST[]←saisie("Veuillez saisir la note " ");
+    TEST[]←saisie("Veuillez saisir la note " ");
+Fin Pour
+
+    Pour i←0 à taille(TEST) faire
+    (moyenne = $i/taille(TEST)); alors
+    Ecrire ("la moyenne est " "& moyenne");
+
+
+Correction
+Algorithm: moyenne 1 élève
+//entrer des notes et en faire la moyenne
+Variables : note, moyenne : reel;
+Début :
+    note←saisie();
+    Pour i←0 à 5 faire
+        notes []←saisie();
+       note globale←notes[i]+moyenne;
+            Fin Pour
+            moyenne←noteglobale/taille notes (6);
+            Ecrire ("la moyenne est " "& moyenne");
+                    Fin Pour
+
+Algorithm :somme, produit et moyenne d'un tableau 3 valeurs
+variables : somme, produit, moyenne, nombres : reel, TAB : tableau;
+Début :
+    nombres←saisie();
+    TAB←nombres();
+Pour i←0 à taille TAB faire
+    TAB[i]←TAB[i]+TAB[i]+TAB[i];
+    Ecrire(TAB[taille TAB]);
+    nombres←saisie();
+    TAB←nombres();
+Fin Pour
+Pour
+    somme←TAB[taille TAB];
+    Ecrire(somme);
+        produit←TAB[i]*TAB[taille TAB];
+    Ecrire(produit);
+Fin Pour 
+Pour   
+    moyenne←somme/TAB[taille TAB];
+    Ecrire(moyenne);
+Fin
+
+
+
+Algorithm : combien de fois il y a un nombre dans un tableau
+variables : nombres, [i], occurence, TAB : entier;
+Début:
+TAB←saisie();
+taille←saisie();
+nombre←saisie();
+Pour occurence←0 à taille TAB faire
+Si  
+    (TAB[i] = occurence;) alors
+    Ecrire("Il y a une occurence de " & nombre & " dans le TAB");   
+Sinon Si 
+    (TAB[i] = occurence←occurence+1;) alors
+    Ecrire("Il y a deux occurences de " & nombre & " dans le TAB");
+Fin
+    
+
+    Algorithm: calculer la somme à payer et la remise de la monnaie
+    variables: prix, quantité, valeurs: entier;
+    Début:
+    prix←saisie();
+    valeurs←saisie();
+    quantité←saisie();
+    Ecrire("La somme à payer est " & prix * quantité);
+    Ecrire("La remise est " & valeurs * quantité);
+
+
+    
