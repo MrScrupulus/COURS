@@ -1,0 +1,35 @@
+//Exercice 4 :
+//Créer un objet "compte" avec les propriétés "nom", "solde" et "historique".
+
+// Ajouter des méthodes "deposer" et "retirer" à  cet objet pour effecturer
+// des opérations sur le solde et les rajouter dans l'historique.
+
+// Ajouter une méthode "afficherHistorique" qui affiche toutes les opérations dans l'historique.
+
+//exemple de process( avec solde initial à 1000 euros) :
+
+let compte = {
+  nom: "Compte",
+  solde: 1000,
+  historique: [],
+
+  deposer: function (a) {
+    this.solde += a;
+    this.historique.push(`dépot: ${+a}`);
+    console.log("Nouveau solde: " + this.solde);
+  },
+  retirer: function (a) {
+    this.solde -= a;
+    this.historique.push(`retrait: ${-a}`);
+    console.log("Nouveau solde: " + this.solde);
+  },
+  afficherHistorique: function () {
+    for (let i = 0; i < this.historique.length; i++) {
+      console.log(this.historique[i]);
+    }
+    console.log("Solde actuel:", this.solde);
+  },
+};
+compte.deposer(100); //dépôt: 100 euros
+compte.retirer(500); // retrait: 500 euros
+compte.afficherHistorique(); // Nouveau solde: 600 euros
