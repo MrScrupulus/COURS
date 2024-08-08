@@ -12,16 +12,16 @@ if (permis < 2) {
   console.log("-1");
 }
 
-let accident = 0;
+let accident = 2;
 if (accident == 0) {
   console.log("-1");
-} else if ("accident >0" && "accident <1") {
+} else if ("accident >0" && "accident =1") {
   console.log("+2");
 } else if (accident > 1) {
   console.log("+3");
 }
 //const score = (age, permis, accident) => age + permis + accident;
-console.log(
+/*console.log(
   addition((score = (age, permis, accident) => age + permis + accident))
 );
 
@@ -40,9 +40,9 @@ switch (score) {
   /* default:
     console.log("tarif bleu.");
     break;*/
-}
+//}
 
-//let scrore = ["bleu", "vert", "orange", "rouge"];
+//let score = ["bleu", "vert", "orange", "rouge"];
 //for (let i = 0; i < couleur.length; i++) {
 //console.log(couleur[i]);
-//}
+//}*/
