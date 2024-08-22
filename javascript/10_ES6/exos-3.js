@@ -9,12 +9,12 @@ let tabUsers = [
   },
 ];
 const rechercherUtilisateurParNom = (nomRecherche) => {
-  let trouver = false;
+  let trouver = false; //boulean
   for (const name of tabUsers) {
     if (name.nom === nomRecherche) {
       trouver = true;
     }
-  } //boulean
+  }
   if (trouver) {
     console.log(`${nomRecherche} existe`);
   } else {
