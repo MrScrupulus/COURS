@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const a = prompt(`Entrez un premiernombre`);
+      const b = prompt(`Entrez un second nombre`);
+      const result = a * b;
+      let signe;
+      if (isNaN(result)) {
+        console.log(`Opération impossible ${a} x ${b}`);
+      } else {
+        if (result > 0) {
+          signe = `positif`;
+        } else {
+          signe = `negatif`;
+        }
+        console.log(`${a} x ${b} = ${result} est ${signe}`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

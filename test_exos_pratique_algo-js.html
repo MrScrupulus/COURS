@@ -5,15 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      const chiffre = prompt("Entrez un nombre");
-
-      if (chiffre > 10 || chiffre < 0) {
-        console.log("Le nombre entré est invalide");
-      } else {
-        for (let i = chiffre; i >= 0; i--) {
-          console.log(i);
-        }
+      /*function isPalindrome(word) {
+        const letters = word.split("").reverse().join("");
+        return word.toUpperCase() === reversedWord.toUpperCase();
       }
+      const words = {
+        kayak: true,
+        sos: true,
+        balai: false,
+      };
+      for (let word in words) {
+        if (isPalindrome(word)) {
+          console.log(word);
+        } else {
+          console.log(word);
+        }
+      }*/
+
+      const students = [
+        {
+          name: "John",
+          notes: [17, 18, 20, 13, 15],
+        },
+        {
+          name: "Jane",
+          notes: [17, 18, 20, 13, 15],
+        },
+        {
+          name: "Sophie",
+          notes: [17, 12, 14, 15, 13],
+        },
+        {
+          name: "Marc",
+          notes: [2, 3, 5, 8, 9],
+        },
+        {
+          names: "Manon",
+          notes: [18, 17, 18, 19, 12],
+        },
+      ];
+      const moyenne = (notes) => {
+        let sum = 0;
+        for (let note of notes) {
+          sum = sum + note;
+        }
+        return sum / notes.length;
+      };
+      const compareStudent = (a, b) => {
+        return b.moyenne - a.moyenne;
+      };
+
+      for (let student of students) {
+        student.moyenne = moyenne(student.notes);
+      }
+      students.sort(compareStudent);
+      const formatStudent = (student) => {
+        return `${student.name} avec une moyenne de ${student.moyenne}`;
+      };
+      console.log(`Top 3 étudiant
+      1: ${formatStudent(students[0])}
+      2: ${formatStudent(students[1])}	
+      3: ${formatStudent(students[2])}`);
     </script>
   </head>
   <body></body>
