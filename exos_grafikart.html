@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*function isPalindrome(word) {
+        const letters = word.split("");
+        console.log(letters.reverse());
+        letters.reverse();
+        const reverseWord = letters.join("");
+        return word.toUpperCase() === reverseWord.toUpperCase();
+
+        //reverse
+        //split
+        //join
+        //toUpperCase
+      }
+      const words = {
+        kayak: true,
+        SOS: true,
+        Kayak: true,
+        Bonjour: false,
+      };
+      for (let word in words) {
+        if (isPalindrome(word) !== words[word]) {
+          console.error(`isPalindrome(${word})`);
+        }
+      }*/
+
+      /*const students = [
+        {
+          name: "John",
+          notes: [1, 20, 18, 19, 12],
+        },
+        {
+          name: "Jane",
+          notes: [17, 18, 20, 13, 15],
+        },
+        {
+          name: "Sophie",
+          notes: [17, 12, 14, 15, 13],
+        },
+        {
+          name: "Marc",
+          notes: [2, 3, 5, 8, 9],
+        },
+        {
+          name: "Manon",
+          notes: [18, 17, 18, 19, 12],
+        },
+      ];
+      const moyenne = (notes) => {
+        let sum = 0;
+        for (let note of notes) {
+          sum = sum + note;
+        }
+        return sum / notes.length;
+      };
+      const compareStudent = (a, b) => {
+        return b.moyenne - a.moyenne;
+      };
+      for (let student of students) {
+        student.moyenne = moyenne(student.notes);
+        student.worst = Math.min(...student.notes);
+        student.best = Math.max(...student.notes);
+      }
+      students.sort(compareStudent);
+
+      const formatStudent = (student) => {
+        return `${student.name} avec une moyenne de ${student.moyenne}
+        une note minimale de ${student.worst} et une note maximale de ${student.best}`;
+      };
+
+      console.log(`Top 3 étudiants
+      1: ${formatStudent(students[0])}
+      2: ${formatStudent(students[1])}
+      3: ${formatStudent(students[2])}`);*/
+
+      const phrase = `“La liberté est un bagne aussi longtemps qu'un seul homme est asservi sur la terre.” “Tout esclave a en ses mains le pouvoir de briser ses chaînes.” “Où il n'y a point de maître, tout le monde est maître ; où tout le monde est maître, tout le monde est esclave.” “La liberté de pensée est absolue ou elle n'est rien.”`;
+      const frequencies = {};
+      const words = phrase
+        .toLowerCase()
+        .replaceAll(",", "")
+        .replaceAll(".", "")
+        .replaceAll("?", "")
+        .replaceAll(";", "")
+        .replaceAll(":", "")
+        .replaceAll('"', "")
+        .replaceAll('"', "")
+        .split(" ");
+      for (let word of words) {
+        if (frequencies[word]) {
+          frequencies[word]++;
+        } else {
+          frequencies[word] = 1;
+        }
+      }
+      const frequenciesArray = [];
+      for (let k in frequencies) {
+        frequenciesArray.push({
+          word: k,
+          count: frequencies[k],
+        });
+      }
+      frequenciesArray.sort((a, b) => b.count - a.count);
+      console.log(
+        `Les mots les plus fréquents sont "${frequenciesArray[0].word}", "${frequenciesArray[1].word}" et "${frequenciesArray[2].word}"`
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
