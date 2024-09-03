@@ -6,6 +6,7 @@
 }
 body {
   overflow-x: hidden;
+  min-height: 110vh;
 }
 
 div#logo {

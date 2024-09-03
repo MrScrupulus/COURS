@@ -19,9 +19,22 @@ hamburger.addEventListener("click", () => {
   if (ulMobile.classList.contains("toggled")) {
     ulMobile.animate(toggleNav, option);
   }
-  const bodyAll = document.querySelectorAll("nav:not(#nav-mobile)");
-  bodyAll.addEventListener("click", () => {
-    // bodyAll.contains(":not #nav-mobile");
-    bodyAll.animate(toggleNav.reverse(), option);
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleNav();
+  });
+  document.addEventListener("click", (e) => {
+    if (ulMobile.classList.contains("toggled") && !hamburger.contains(e.target))
+      toggleNav();
+  });
+
+  window.addEventListener("scroll", () => {
+    if (ulMobile.classList.contains("toggled")) {
+      ulMobile.classList.remoce("toggled");
+      ulMobile.animate(
+        [{ transform: "translate(0)" }, { transform: "translate(100%)" }],
+        { fill: "forwards", duration: 750 }
+      );
+    }
   });
 });
