@@ -7,6 +7,9 @@ const h1 = document.querySelector("h1");
 document.addEventListener("DOMContentLoaded", () => {
   main.style.paddingTop = `${nav.offsetHeight + 2}px`;
 });
+document.addEventListener("DOMContentLoaded", () => {
+  ulMobile.style.marginTop = `${nav.offsetHeight + h1.offsetHeight + 1}px`;
+});
 
 const toggleMenu = () => {
   ulMobile.classList.toggle("toggled");
@@ -58,6 +61,7 @@ window.addEventListener("scroll", () => {
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 640) {
     main.style.paddingTop = `${nav.offsetHeight + 2}px`;
+    ulMobile.style.marginTop = `${nav.offsetHeight + h1.offsetHeight + 1}px`;
     if (ulMobile.classList.contains("toggled")) {
       ulMobile.animate(
         [{ transform: "translate(0)" }, { transform: "translate(100%)" }],
@@ -67,7 +71,7 @@ window.addEventListener("resize", () => {
   }
   const appHeight = () => {
     const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    document.documentElement.style.setProperty("110vh", `${vh}px`);
   };
   window.addEventListener("resize", appHeight);
   appHeight();
