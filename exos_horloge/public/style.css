@@ -4,6 +4,9 @@
   list-style-type: none;
   text-decoration: none;
 }
+:root {
+  --vh: 1vh;
+}
 body {
   overflow-x: hidden;
   min-height: 110vh;
@@ -14,10 +17,16 @@ div#logo {
   align-items: center;
 }
 nav {
+  background-color: aqua;
   position: relative;
   display: flex;
   justify-content: space-between;
   z-index: 1;
+}
+main {
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 0 8px;
+  /* padding: 4em 8px; */
 }
 
 ul#nav {
@@ -27,6 +36,7 @@ ul#nav {
   align-items: center;
 }
 ul#nav-mobile {
+  background-color: blueviolet;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
