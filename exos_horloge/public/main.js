@@ -4,11 +4,17 @@ const nav = document.querySelector("nav");
 const main = document.querySelector("main");
 const h1 = document.querySelector("h1");
 
+const url = window.location.href;
+const page = url.split("/").pop().replace(".html", "");
+//console.log(url.split("/").pop().split(".")[0]);
+console.log(page);
+
 document.addEventListener("DOMContentLoaded", () => {
+  if (page === "") {
+    nav.style.display = "none";
+  }
   main.style.paddingTop = `${nav.offsetHeight + 2}px`;
-});
-document.addEventListener("DOMContentLoaded", () => {
-  ulMobile.style.marginTop = `${nav.offsetHeight + h1.offsetHeight + 1}px`;
+  ulMobile.style.marginTop = `${nav.offsetHeight + 1}px`;
 });
 
 const toggleMenu = () => {
@@ -49,6 +55,9 @@ document.addEventListener("click", (e) => {
 
 window.addEventListener("scroll", () => {
   if (scrollY > 20) {
+    if (page === "") {
+      nav.style.display = "flex";
+    }
     if (ulMobile.classList.contains("toggled")) {
       ulMobile.classList.remove("toggled");
       ulMobile.animate(
@@ -59,10 +68,11 @@ window.addEventListener("scroll", () => {
   }
 });
 window.addEventListener("resize", () => {
+  ulMobile.style.marginTop = `${nav.offsetHeight + 1}px`;
   if (window.innerWidth >= 640) {
     main.style.paddingTop = `${nav.offsetHeight + 2}px`;
-    ulMobile.style.marginTop = `${nav.offsetHeight + h1.offsetHeight + 1}px`;
     if (ulMobile.classList.contains("toggled")) {
+      ulMobile.classList.remove("toggled");
       ulMobile.animate(
         [{ transform: "translate(0)" }, { transform: "translate(100%)" }],
         { fill: "forwards", duration: 0 }

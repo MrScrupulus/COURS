@@ -24,7 +24,7 @@ nav {
   z-index: 1;
 }
 main {
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 110);
   padding: 0 8px;
   /* padding: 4em 8px; */
 }
@@ -48,6 +48,9 @@ ul#nav-mobile {
   justify-content: space-around;
   align-items: center;
   transform: translate(100%);
+}
+section#hero {
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 div#hamburger {
