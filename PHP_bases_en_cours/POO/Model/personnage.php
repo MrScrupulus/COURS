@@ -9,11 +9,11 @@ class Personnage
      * @var string $prenom prénom du personnage
      */
 
-    public string $prenom;
-    public int $pointsDeVie;
-    public int $force;
-    public int $age;
-    public string $email;
+    private string $prenom;
+    private int $pointsDeVie;
+    private int $force;
+    private int $age;
+    private string $email;
 
     public function __construct(
         $prenom,
@@ -34,9 +34,22 @@ class Personnage
     }
 
     // changer le nom d'un personnage ...
-    public function change($prenom)
+    public function setPrenom($nouveauPrenom)
     {
-        $this->prenom = $prenom;
+        $this->prenom = $nouveauPrenom;
+    }
+    //getter
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+    public function setPointsDeVie($nouveauxPtsdeVie)
+    {
+        $this->pointsDeVie = $nouveauxPtsdeVie;
+    }
+    public function getPointsDeVie()
+    {
+        return $this->pointsDeVie;
     }
     public function __toString()
     {
@@ -56,10 +69,10 @@ var_dump($personnage1);
 var_dump($personnage2);
 var_dump($personnage3);
 echo $personnage1;
-echo $personnage1->pointsDeVie . PHP_EOL;
+echo $personnage1->setPointsDeVie(200) . PHP_EOL;
 $personnage2->attaquer($personnage1) . PHP_EOL;
-$personnage1->change('Christophe Le Blanc');
-echo $personnage1->pointsDeVie;
+$personnage1->setPrenom('Christophe Le Blanc');
+echo $personnage1->setPointsDeVie(185);
 echo $personnage1;
 //manipulation
 
